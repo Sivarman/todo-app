@@ -1,0 +1,182 @@
+/* ====== BODY ====== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* ====== CARD ====== */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  padding: 35px;
+  width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Card Hover */
+.container:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ====== TITLE ====== */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* ====== INPUT SECTION ====== */
+.input-section {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Inputs & Select */
+input,
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+/* Input Focus Effect */
+input:focus,
+select:focus {
+  box-shadow: 0 0 10px #ffffff;
+  transform: scale(1.05);
+}
+
+/* ====== BUTTONS ====== */
+button {
+  padding: 9px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6b6b, #ff9f43);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Button Hover */
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  background: linear-gradient(45deg, #48dbfb, #1dd1a1);
+}
+
+/* Button Active */
+button:active {
+  transform: scale(0.95);
+}
+
+/* ====== FILTER BUTTONS ====== */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+/* ====== TODO LIST ====== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Todo Item */
+li {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+/* Hover on Todo Item */
+li:hover {
+  transform: scale(1.03);
+  background: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Completed Task */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Small Text */
+small {
+  display: block;
+  font-size: 12px;
+  color: #555;
+}
+
+/* Scroll if too many tasks */
+ul {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Scrollbar Styling */
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.complete-btn {
+  background: #4caf50;
+}
+
+.complete-btn:hover {
+  background: #2e7d32;
+}
+
+.edit-btn {
+  background: #ff9800;
+}
+
+.edit-btn:hover {
+  background: #ef6c00;
+}
+
+.delete-btn {
+  background: #f44336;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}
